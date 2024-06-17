@@ -57,7 +57,7 @@ func (s *APIserver) configureRouter() {
 }
 
 func (s *APIserver) configureStore() error {
-	st := storage.New(s.config.Store)
+	st := storage.New(s.config.Storage)
 
 	if err := st.Open(); err != nil {
 		return err
